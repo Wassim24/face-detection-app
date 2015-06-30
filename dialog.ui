@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1192</width>
+    <height>506</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>645</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="original">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>320</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>320</width>
+     <height>240</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="processed">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>10</y>
+     <width>320</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>320</width>
+     <height>240</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="eyes">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>255</y>
+     <width>320</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>320</width>
+     <height>240</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mouth">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>255</y>
+     <width>320</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>320</width>
+     <height>240</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>187</y>
+     <width>201</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Morphological Opening settings</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>31</y>
+      <width>181</width>
+      <height>124</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="kernelLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Kernels Size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="kernelSizeSpin">
+         <property name="minimum">
+          <number>3</number>
+         </property>
+         <property name="maximum">
+          <number>21</number>
+         </property>
+         <property name="singleStep">
+          <number>2</number>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="itLayout">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Skin iterations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="skinIt">
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="itLayout_3">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Mouth Iterations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="mouthIt">
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="itLayout_2">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Eyes iterations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="eyesIt">
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>7</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Color spaces</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>441</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="colorLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="rgbCheckbox">
+       <property name="text">
+        <string>RGB Color space</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="ycbcrCheckbox">
+       <property name="text">
+        <string>YCbCr Color space</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="hsvCheckBox">
+       <property name="text">
+        <string>HSV Color space</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>77</y>
+     <width>461</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Thresholds</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>441</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="thresholdLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="eyesThresholdSlider">
+         <property name="text">
+          <string>Eyes threshold  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="eyesThreshSlider">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="value">
+          <number>180</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="eyesThreshLcd">
+         <property name="value" stdset="0">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>180</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Mouth threshold</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="mouthThreshSlider">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="value">
+          <number>180</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="mouthThreshLcd">
+         <property name="value" stdset="0">
+          <double>180.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>361</y>
+     <width>252</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Surfaces of blobs</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>231</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Face</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="lowFaceSurface">
+         <property name="maximum">
+          <number>99999999</number>
+         </property>
+         <property name="value">
+          <number>3500</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="highFaceSurface">
+         <property name="maximum">
+          <number>99999999</number>
+         </property>
+         <property name="value">
+          <number>999999</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Eyes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="lowEyeSurface">
+         <property name="minimumSize">
+          <size>
+           <width>73</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="highEyeSurface">
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="value">
+          <number>200</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="itLayout_7">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Mouth</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="lowMouthSurface">
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="highMouthSurface">
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="value">
+          <number>300</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>188</y>
+     <width>251</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Canny | Blur | Device</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>231</width>
+      <height>124</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="cannyThresholds">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Canny</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="lowCannyThresh">
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="highCannyThresh">
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>320</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Canny Dilate Ite</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="cannyDilate">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Blur intensity</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="blurIntensity">
+         <property name="minimum">
+          <number>3</number>
+         </property>
+         <property name="maximum">
+          <number>111</number>
+         </property>
+         <property name="singleStep">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Device Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="deviceNumber">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="starting">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>367</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop the video feed </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="hide">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>20</y>
+     <width>41</width>
+     <height>477</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quit">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>423</y>
+     <width>201</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
